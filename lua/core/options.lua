@@ -25,6 +25,7 @@ opt.fileencodings = "ucs-bom,utf-8,gbk,cp936" -- 读文件时,多编码尝试
 
 
 -- 其他Others
+opt.showmode = false -- 关闭模式显示(交给插件显示)
 opt.termguicolors = true -- 开启24-bit RGB
 opt.clipboard = "unnamedplus"
 opt.mouse = "a"

@@ -29,5 +29,15 @@ return{
             {"<leader>tc",":Neotree close<CR>", silent = true },
             {"<leader>tg",":Neotree git_status<CR>", silent = true },
         },
-    }
+    },
+    {
+        "nvim-lualine/lualine.nvim",
+         event = "ColorScheme",
+         dependencies = { 'nvim-tree/nvim-web-devicons' },
+         opts = {
+             options =  {
+                 theme =  "dracula"
+             }
+          },
+         },
 }
