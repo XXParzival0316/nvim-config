@@ -30,5 +30,8 @@ opt.termguicolors = true -- 开启24-bit RGB
 opt.clipboard = "unnamedplus"
 opt.mouse = "a"
 
-
-
+-- LSP诊断配置
+vim.diagnostic.config({
+    virtual_text = true,
+    update_in_insert = true,
+})
