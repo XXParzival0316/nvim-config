@@ -3,7 +3,7 @@ return{
         "Mofiqul/dracula.nvim",
         config = function()
             vim.cmd[[colorscheme dracula]]
-        end,
+        end
     },
     {
         "akinsho/bufferline.nvim",
@@ -25,9 +25,8 @@ return{
           "MunifTanjim/nui.nvim",
         },
         keys = {
-            {"<leader>to",":Neotree show<CR>", silent = true },
-            {"<leader>tc",":Neotree close<CR>", silent = true },
-            {"<leader>tg",":Neotree float git_status<CR>", silent = true },
+            {"<leader>to", ":Neotree show<CR>", silent = true },
+            {"<leader>tc", ":Neotree close<CR>", silent = true },
         },
     },
     {
@@ -38,5 +37,20 @@ return{
                  theme =  "dracula"
              }
           },
-         },
+    },
+    {
+        -- 系统环境要装ripgrep&fd
+        'nvim-telescope/telescope.nvim', version = '*',
+        dependencies = {
+        'nvim-lua/plenary.nvim',
+        { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+        },
+        keys = {
+            {"<leader>ff", ":Telescope find_files<CR>", silent = true},
+            {"<leader>fg", ":Telescope live_grep<CR>", silent = true},
+            {"<leader>fb", ":Telescope buffers<CR>", silent = true},
+            {"<leader>fh", ":Telescope help_tags<CR>", silent = true},
+            {"<leader>fg", ":Telescope git_status<CR>", silent = true},
+        }
+    }
 }
