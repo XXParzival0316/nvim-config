@@ -15,6 +15,19 @@ return{
             {"<leader>p", ":BufferLinePick<CR>", silent = true },
             {"<leader>c", ":BufferLinePickClose<CR>", silent = true },
         }
+    },
+    {
+         "nvim-neo-tree/neo-tree.nvim",
+         branch = "v3.x",
+         dependencies = {
+          "nvim-tree/nvim-web-devicons",
+          "nvim-lua/plenary.nvim",
+          "MunifTanjim/nui.nvim",
+        },
+        keys = {
+            {"<leader>to",":Neotree show<CR>", silent = true },
+            {"<leader>tc",":Neotree close<CR>", silent = true },
+            {"<leader>tg",":Neotree git_status<CR>", silent = true },
+        },
     }
-    
 }
