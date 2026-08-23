@@ -19,7 +19,10 @@ return{
     {
          -- 自动补全引擎
          'saghen/blink.cmp',
-          dependencies = { 'rafamadriz/friendly-snippets' },
+          dependencies = { 
+              'rafamadriz/friendly-snippets',
+              {"echasnovski/mini.pairs", opts = {} } -- 括号自动补全
+          },
           version = '1.*',
           opts = {
             keymap = { preset = 'super-tab' },
