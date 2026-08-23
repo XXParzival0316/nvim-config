@@ -1,8 +1,15 @@
 return{
     {
+        -- 运行代码
         "CRAG666/code_runner.nvim",
         cmd = { "RunCode", "RunFile", "RunProject", "RunClose", "CRFiletype", "CRProjects" },
         opts = {},
+    },
+    {
+        "nvim-treesitter/nvim-treesitter",
+        build = ":TSUpdate",
+        event = "InsertEnter",
+
     },
     {
           -- LSP 自动化(下载,配置,启用) 
@@ -19,7 +26,7 @@ return{
     {
          -- 自动补全引擎
          'saghen/blink.cmp',
-          dependencies = { 
+          dependencies = {
               'rafamadriz/friendly-snippets',
               {"echasnovski/mini.pairs", opts = {} } -- 括号自动补全
           },

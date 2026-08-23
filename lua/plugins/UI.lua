@@ -26,8 +26,7 @@ return{
           "MunifTanjim/nui.nvim",
         },
         keys = {
-            {"<leader>to", ":Neotree show<CR>", silent = true },
-            {"<leader>tc", ":Neotree close<CR>", silent = true },
+            {"<leader>t", ":Neotree toggle<CR>", silent = true },
         },
     },
     {
