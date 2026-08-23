@@ -3,7 +3,17 @@ return{
         -- 运行代码
         "CRAG666/code_runner.nvim",
         cmd = { "RunCode", "RunFile", "RunProject", "RunClose", "CRFiletype", "CRProjects" },
-        opts = {},
+        opts = {
+            filetype = {
+                -- 适配Unix
+                python = function ()
+                    if vim.fn.has("mac") or vim.fn.has("unix")then
+                        return "python3 -u"
+                    end
+                    return "python"
+                end,
+            }
+        },
     },
     {
         "nvim-treesitter/nvim-treesitter",
