@@ -1,7 +1,12 @@
 return{
-     {
+    {
+        "CRAG666/code_runner.nvim",
+        cmd = { "RunCode", "RunFile", "RunProject", "RunClose", "CRFiletype", "CRProjects" },
+        opts = {},
+    },
+    {
           -- LSP 自动化(下载,配置,启用) 
-          "mason-org/mason-lspconfig.nvim",
+         "mason-org/mason-lspconfig.nvim",
           dependencies = {
                 { "mason-org/mason.nvim", opts = {} },
                 "neovim/nvim-lspconfig",
