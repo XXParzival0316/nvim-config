@@ -31,14 +31,6 @@ return{
             ensure_installed = {"lua_ls","clangd","pyright"}
           },
           event = "VeryLazy",
-          config = function ()
-              vim.api.nvim_create_autocmd("FileType",{
-              pattern = "gdscript",
-              callback = function ()
-                vim.lsp.enable("gdscript")
-              end
-              })
-          end,
     },
     {
          -- 自动补全引擎
@@ -76,5 +68,15 @@ return{
             },
           },
           event = { "InsertEnter", "CmdlineEnter"}
-    }, 
+    },
+    {
+          'Mathijs-Bakker/godotdev.nvim',
+           dependencies = {
+            'mfussenegger/nvim-dap',
+            {"rcarriga/nvim-dap-ui",dependencies = { "nvim-neotest/nvim-nio" }},
+            'nvim-treesitter/nvim-treesitter'
+           },
+           opts = {},
+           ft = {"gdscript","gdshader"}
+    }
 }
