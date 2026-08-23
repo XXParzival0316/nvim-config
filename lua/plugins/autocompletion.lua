@@ -1,15 +1,15 @@
 return{
-    {
-        -- LSP 自动化(下载,配置,启用) 
-        "mason-org/mason-lspconfig.nvim",
-        dependencies = {
-            { "mason-org/mason.nvim", opts = {} },
-            "neovim/nvim-lspconfig",
-        },
-        opts = {
-            ensure_installed = {"lua_ls"}
-        },
-        event = "VeryLazy"
+     {
+          -- LSP 自动化(下载,配置,启用) 
+          "mason-org/mason-lspconfig.nvim",
+          dependencies = {
+                { "mason-org/mason.nvim", opts = {} },
+                "neovim/nvim-lspconfig",
+          },
+          opts = {
+            ensure_installed = {"lua_ls","clangd","pyright"}
+          },
+          event = "VeryLazy",
     },
     {
          -- 自动补全引擎
