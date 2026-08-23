@@ -5,16 +5,15 @@ return{
         cmd = { "RunCode", "RunFile", "RunProject", "RunClose", "CRFiletype", "CRProjects" },
         opts = {
             filetype = {
-                -- 适配Unix
                 python = function ()
-                    if vim.fn.has("mac") or vim.fn.has("unix")then
+                    if  vim.fn.has("unix") == 1 then
                         return "python3 -u"
                     end
                     return "python"
-                end,
-            }
+                end
+            },
         },
-    },
+     },
     {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
