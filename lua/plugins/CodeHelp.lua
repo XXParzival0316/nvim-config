@@ -69,14 +69,4 @@ return{
           },
           event = { "InsertEnter", "CmdlineEnter"}
     },
-    {
-          'Mathijs-Bakker/godotdev.nvim',
-           dependencies = {
-            'mfussenegger/nvim-dap',
-            {"rcarriga/nvim-dap-ui",dependencies = { "nvim-neotest/nvim-nio" }},
-            'nvim-treesitter/nvim-treesitter'
-           },
-           opts = {},
-           ft = {"gdscript","gdshader"}
-    }
 }
