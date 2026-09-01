@@ -47,7 +47,7 @@ return{
         },
         keys = {
             {"<leader>ff", ":Telescope find_files<CR>", silent = true},
-            {"<leader>fg", ":Telescope live_grep<CR>", silent = true},
+            {"<leader>fl", ":Telescope live_grep<CR>", silent = true},
             {"<leader>fb", ":Telescope buffers<CR>", silent = true},
             {"<leader>fh", ":Telescope help_tags<CR>", silent = true},
             {"<leader>fg", ":Telescope git_status<CR>", silent = true},
