@@ -18,7 +18,10 @@ return{
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
         event = "InsertEnter",
+        config = function ()
+           require('nvim-treesitter').install { 'lua', 'python'}
 
+        end
     },
     {
           -- LSP 自动化(下载,配置,启用) 
@@ -69,14 +72,4 @@ return{
           },
           event = { "InsertEnter", "CmdlineEnter"}
     },
-    {
-          'Mathijs-Bakker/godotdev.nvim',
-           dependencies = {
-            'mfussenegger/nvim-dap',
-            {"rcarriga/nvim-dap-ui",dependencies = { "nvim-neotest/nvim-nio" }},
-            'nvim-treesitter/nvim-treesitter'
-           },
-           opts = {},
-           ft = {"gdscript","gdshader"}
-    }
 }
