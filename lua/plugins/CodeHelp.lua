@@ -18,7 +18,10 @@ return{
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
         event = "InsertEnter",
+        config = function ()
+           require('nvim-treesitter').install { 'lua', 'python'}
 
+        end
     },
     {
           -- LSP 自动化(下载,配置,启用) 
